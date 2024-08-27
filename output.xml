@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-26T20:33:08.729749" rpa="false" schemaversion="5">
+<suite id="s1" name="PortalPessoal" source="C:\Users\Rafa\Desktop\robot framework\Portal pessoal\PortalPessoal.robot">
+<test id="s1-t1" name="Cenário 1: Abrir o Portal Pessoal" line="50">
+<kw name="Dado que eu quero logar no Portal Pessoal">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:08.936036" level="INFO">Opening browser 'chrome' to base url 'https://contactcenter6.aec.com.br/Portal_Pessoal/Acesso/Login?ReturnUrl=%2fPortal_Pessoal%2f'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T20:33:08.936036" elapsed="2.501921"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:08.936036" elapsed="2.501921"/>
+</kw>
+<kw name="Quando insiro meu login e senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:11.440007" level="INFO">Typing text 'rafael.coimbra' into text field '//input[@id="Matricula"]'.</msg>
+<arg>${input_login}</arg>
+<arg>rafael.coimbra</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:11.438991" elapsed="0.080949"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:11.520964" level="INFO">Typing text 'Closertoheaven!321' into text field '//input[@id="Senha"]'.</msg>
+<arg>${input_senha}</arg>
+<arg>Closertoheaven!321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:11.519940" elapsed="0.212640"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:11.438991" elapsed="0.294701"/>
+</kw>
+<kw name="E clico no captcha e em entrar">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T20:33:21.735602" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T20:33:11.733692" elapsed="10.001910"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:21.736118" level="INFO">Clicking element '//*[@id="frmLogin"]/div[2]/button'.</msg>
+<arg>${button_entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:21.735602" elapsed="7.494931"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:11.733692" elapsed="17.496841"/>
+</kw>
+<kw name="Então conseguirei logar">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:29.253990" level="INFO">Element '//*[@id="navbar"]/ul[1]/li[6]/a' is displayed.</msg>
+<arg>${prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T20:33:29.231558" elapsed="0.022432"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:29.231558" elapsed="0.022432"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:08.936036" elapsed="20.317954"/>
+</test>
+<test id="s1-t2" name="Cenário 2: Abrir e não inserir a senha" line="56">
+<kw name="Dado que eu quero logar no Portal Pessoal">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:29.255970" level="INFO">Opening browser 'chrome' to base url 'https://contactcenter6.aec.com.br/Portal_Pessoal/Acesso/Login?ReturnUrl=%2fPortal_Pessoal%2f'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T20:33:29.255970" elapsed="2.725104"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:29.255970" elapsed="2.725104"/>
+</kw>
+<kw name="Quando insiro somente o login e não a senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:31.982315" level="INFO">Typing text 'rafael.coimbra' into text field '//input[@id="Matricula"]'.</msg>
+<arg>${input_login}</arg>
+<arg>rafael.coimbra</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:31.982315" elapsed="0.119246"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:31.981074" elapsed="0.121395"/>
+</kw>
+<kw name="E clico no captcha e em entrar">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T20:33:42.103306" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T20:33:32.103226" elapsed="10.000080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:42.103306" level="INFO">Clicking element '//*[@id="frmLogin"]/div[2]/button'.</msg>
+<arg>${button_entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:42.103306" elapsed="0.431997"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:32.102469" elapsed="10.432834"/>
+</kw>
+<kw name="Então o site mostrará a mensagem de erro &quot;Favor informar a senha&quot;">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:42.554628" level="INFO">Element '//*[@id="frmLogin"]/div[2]/div[6]/div/ul/li' is displayed.</msg>
+<arg>${prova_sem_senha}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T20:33:42.536315" elapsed="0.018313"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:42.535303" elapsed="0.019325"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:29.255011" elapsed="13.300740"/>
+</test>
+<test id="s1-t3" name="Cenário 3: Abrir e não inserir a Matricula" line="62">
+<kw name="Dado que eu quero logar no Portal Pessoal">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:42.557495" level="INFO">Opening browser 'chrome' to base url 'https://contactcenter6.aec.com.br/Portal_Pessoal/Acesso/Login?ReturnUrl=%2fPortal_Pessoal%2f'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-26T20:33:42.557495" elapsed="2.663059"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:42.556678" elapsed="2.663876"/>
+</kw>
+<kw name="Quando não insiro o login e somente a senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:45.222518" level="INFO">Typing text 'Closertoheaven!321' into text field '//input[@id="Senha"]'.</msg>
+<arg>${input_senha}</arg>
+<arg>Closertoheaven!321</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:45.222518" elapsed="0.233737"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:45.221580" elapsed="0.234675"/>
+</kw>
+<kw name="E clico no captcha e em entrar">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-26T20:33:55.457514" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-26T20:33:45.457219" elapsed="10.000295"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:55.457514" level="INFO">Clicking element '//*[@id="frmLogin"]/div[2]/button'.</msg>
+<arg>${button_entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T20:33:55.457514" elapsed="0.081701"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:45.456255" elapsed="10.082960"/>
+</kw>
+<kw name="Então o site mostrará a mensagem de erro &quot;Favor informar a Matricula/Login&quot;">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-26T20:33:55.569694" level="INFO">Element '//*[@id="frmLogin"]/div[2]/div[6]/div/ul/li[1]' is displayed.</msg>
+<arg>${prova_sem_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T20:33:55.540067" elapsed="0.029627"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:55.540067" elapsed="0.029627"/>
+</kw>
+<status status="PASS" start="2024-08-26T20:33:42.556678" elapsed="13.013016"/>
+</test>
+<status status="PASS" start="2024-08-26T20:33:08.731787" elapsed="46.839951"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="PortalPessoal">PortalPessoal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
